@@ -1,37 +1,37 @@
 # Pipeline de dados
 
-Neste projeto foi abordado a seguinte situação: Duas empresas se unificaram e agora precisam dos dados da empresaA e empresaB unidos. Porém, esses dados não estão no formato esperado e por isso foi criado este pipeline para extrair, tratar e carregar os dados. O famoso ETL.
+Neste projeto foi abordado a seguinte situação: Duas empresas se unificaram e agora precisam dos dados da **empresaA** e **empresaB** unidos. Porém, esses dados não estão no formato esperado e por isso foi criado este pipeline para extrair, tratar e carregar os dados. O famoso ETL.
 
-## Criação das pastas da pipeline em um WSL
+### Criação das pastas da pipeline em um WSL
 
-Esse processo foi crucial para colocarmos em pauta onde serão alocados as pastas e arquivos que estaremos trabalhando. Dessa forma, foi pensando em colocar em WSL (Windows Subsystem for Linux). Que é um subsistema do Linux no Windows onde estarei manipulando estes arquivos e criando pastas para organizar todo o projeto.
+Esse processo foi crucial para colocarmos em pauta onde serão alocados as pastas e arquivos que estaremos trabalhando. Dessa forma, foi pensando em colocar em WSL (**Windows Subsystem for Linux**). Que é um subsistema do Linux no Windows onde estarei manipulando estes arquivos e criando pastas para organizar todo o projeto.
 
-## Rodando o VSCode no nosso ambiente virtual
+### Rodando o VSCode no nosso ambiente virtual
 
-Na imagem abaixo, estamos chamando o 'dir' para listarmos as pastas criadas nesse caminho. Como já temos uma pasta "Documentos" criada, onde ficará os arquivos do nosso projeto, não será necessário utilizar o comando 'mkdir' para a criação da pasta para alocar os nosso arquivos.
+Na imagem abaixo, estamos chamando o '**dir**' para listarmos as pastas criadas nesse caminho. Como já temos uma pasta "Documentos" criada, onde ficará os arquivos do nosso projeto, não será necessário utilizar o comando '**mkdir**' para a criação da pasta para alocar os nosso arquivos.
 
 ![image](https://github.com/user-attachments/assets/bba89692-90c4-4d9b-bb83-ccd61e95be11)
 
-## Explorando os dados no Jupyter Notebook
+### Explorando os dados no Jupyter Notebook
 
-Após montarmos o ambiente e construir as pastas no diretório informado, realizamos a exploração dos dados com o Jupyter Notebook e assim fazemos toda a análise dos dados que estão sendo coletados nos arquivos .JSON e .CSV. Verificamos ali a quantidade de linhas em cada arquivo, cada Header (cabeçalho) dos arquivos e imprimindo os dados que contém neles.
+Após montarmos o ambiente e construirmos as pastas no diretório informado, realizamos a exploração dos dados com o Jupyter Notebook e, assim, fizemos toda a análise dos dados que estão sendo coletados nos arquivos .JSON e .CSV. Verificamos a quantidade de linhas em cada arquivo, os headers (cabeçalhos) dos arquivos e imprimimos os dados contidos neles.
 
-Como o tipo do arquivo .CSV é um tipo lista nós precisamos deixar os arquivo .JSON neste mesmo padrão para que conseguissemos unir estes dados. Com isso, foi feito todo tratamento dos dados .JSON, assim como a nomenclatura das colunas para unificarmos esses dados. Na variável KeyMapping, foi possível fazer um de para das chaves que estavam listadas no arquivo, para que ficasse igual ao nosso .CSV.
+Como o tipo do arquivo .CSV é uma lista, foi necessário padronizar os arquivos .JSON nesse mesmo formato para que conseguíssemos unir esses dados. Para isso, realizamos todo o tratamento dos dados .JSON, incluindo a padronização da nomenclatura das colunas, de modo a unificar esses dados. Na variável KeyMapping, foi possível criar um mapeamento das chaves listadas no arquivo .JSON para que ficassem equivalentes às do arquivo .CSV.
 
-Há um ponto se frisar, que nos nossos dados do arquivo .JSON não temos a chave 'Data da venda' como temos no arquivo .CSV. Porém, iremos incluir essa chave dentro do nosso arquivo de fusão e substituindo os valores em branco pela palavra "Indisponivel" para que assim possa ser demonstrado que essa coluna receberá os dados futuramente pelo departamento responsável.
+É importante destacar que, nos dados do arquivo .JSON, não temos a chave 'Data da venda', presente no arquivo .CSV. Contudo, essa chave será incluída no arquivo consolidado, substituindo os valores em branco pela palavra "Indisponível". Isso indicará que a coluna receberá os dados futuramente, a serem fornecidos pelo departamento responsável.
 
 ![image](https://github.com/user-attachments/assets/6618ea7d-0f35-4e5b-a62b-7adeb0182b3e)
 
-## Montando o nosso Script
+## Montando o Script
 
-### Script das fusões dos dados
+### Fusões dos dados
 
 Explorando os dados e entendendo como eles se comportam no nosso Notebook, agora está na hora de criarmos o nosso Script para os outros tratamentos que iremos realizar futuramente. Nesta primeira etapa já estamos fazendo a extração dos dados de ambos os arquivos, renomeando as nossas colunas e unindo estes dados. Importamos a nossso "processamento_dados" e atribuíndo a classe "dados" em nosso arquivo principal para que possamos classificarmos por metódos e atributos.
 
 ![image](https://github.com/user-attachments/assets/9cac1ac3-bc2e-4cc1-82f8-52e32c1a24b0)
 
 
-### Sript do processamento dos dados
+### Processamento dos dados
 
 Nesta parte, estaremos classificando todo o tratamento dos dados dos dois arquivos pelo processo de atributos nesse método privado explícito em nosso código. Dentro dessa classe "dados" temos várias funções fazendo esse processamento. Uma delas é o tratamento das colunas com o List Comprehension que é muito utilizado para diminuir o tamanho do código que poderia ser utilizado, para ser mais eficiente que um for, por exemplo.
 
@@ -45,7 +45,7 @@ Após criarmos toda essa leitura e tratamento dos dados, iremos unir lá no fina
 
 ![image](https://github.com/user-attachments/assets/69faf4b2-92b0-43b8-b91a-c179e59f0230)
 
-## Os dados tratados
+## Dados tratados
 
 Sei que por aqui ficará meio complicado de visualizar o resultado final dess projeto, porém não poderia deixar de concluir ele demonstrando como fico esses dados dentro do nosso arquivo. Nesta primeira imagem, estará os dados .JSON que não contém os dados da chave "Data da Venda". Assim, ela ficou substituída conforme na imagem 1.
 
