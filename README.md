@@ -1,2 +1,2 @@
-# Alura
-Aqui estará algumas práticas realizadas dentro dos cursos da Alura que estou fazendo no momento.
+# Pipeline de dados
+- Esse curso teve como embasamento a criação de pipeline de dados onde serão reestruturados alguns arquivos extraídos de algumas empresas para a junção em um só arquivo.
