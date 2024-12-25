@@ -45,3 +45,22 @@ Após criarmos toda essa leitura e tratamento dos dados, iremos unir lá no fina
 
 ![image](https://github.com/user-attachments/assets/69faf4b2-92b0-43b8-b91a-c179e59f0230)
 
+## Os dados tratados
+
+Sei que por aqui ficará meio complicado de visualizar o resultado final dess projeto, porém não poderia deixar de concluir ele demonstrando como fico esses dados dentro do nosso arquivo. Nesta primeira imagem, estará os dados .JSON que não contém os dados da chave "Data da Venda". Assim, ela ficou substituída conforme na imagem 1.
+
+Em seguida na imagem 2, temos os dados .CSV que ficaram no final dessa junção dos dados. Nela teremos todos os dados completos, assim como a data da venda que não tinhamos no .JSON.
+
+### Imagem 1:
+
+![image](https://github.com/user-attachments/assets/3a24cfb1-058e-4b1e-acfb-986edd578e72)
+
+### Imagem 2:
+
+![image](https://github.com/user-attachments/assets/c0ca5016-b333-40de-b518-ad515b9680b4)
+
+## Conclusão
+
+Fiquei muito contente em aprimorar minhas habilidades com o tratamento de dados com Python. Esse projeto foi uma grande projeção de que ainda não acabou e que os estudos deverão continuar para aprimorar o raciocínio e melhorar o desempenho do código a partir das dificuldades apresentadas em nosso dia-a-dias.
+
+Obrigado pela visita! 😉
